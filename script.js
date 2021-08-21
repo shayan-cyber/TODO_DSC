@@ -3,6 +3,7 @@ const clear = document.querySelector(".clear");
 const dataElement = document.getElementById("date");
 const list = document.getElementById("list");
 const input = document.getElementById("input");
+const add = document.getElementById("add_btn")
 
 // classes name
 const CHECK = "fa-check-circle";
@@ -79,8 +80,8 @@ function addToDo(toDo, id, done, trash){
 
 // add  an item tp list 
 
-document.addEventListener("keyup", function(e){
-    if(e.keyCode == 13){
+add.addEventListener("click", function(e){
+   
         const toDo = input.value;
 
         // if the input is not empty
@@ -98,7 +99,7 @@ document.addEventListener("keyup", function(e){
             id++
         }
         input.value ="";
-    }
+    
 })
 
 // complete to do
@@ -136,7 +137,15 @@ list.addEventListener("click", function(event){
     localStorage.setItem("TODO", JSON.stringify(LIST))
 
 })
-console.log(localStorage.getItem("TODO"));
+// console.log(localStorage.getItem("TODO"));
 
+// get random quotes
 
+fetch('https://api.quotable.io/random')
+  .then(response => response.json())
+  .then(data => {
+    // console.log(`${data.content} —${data.author}`)
+    document.getElementById("quote").innerHTML =data.content
+  })
+  
 

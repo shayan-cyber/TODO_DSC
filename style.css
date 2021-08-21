@@ -1,15 +1,40 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@600&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 
 
 body{
     padding: 0;
     margin: 0;
-    background-color:rgba(0,0,0,0.1);
+    
     font-family: 'Klee One', cursive;
 }
+body {
+    background: linear-gradient(347deg, #45b7dc, #45dc83);
+    background-size: 400% 400%;
 
+    -webkit-animation: AnimationName 9s ease infinite;
+    -moz-animation: AnimationName 9s ease infinite;
+    animation: AnimationName 9s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:48% 0%}
+    50%{background-position:53% 100%}
+    100%{background-position:48% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:48% 0%}
+    50%{background-position:53% 100%}
+    100%{background-position:48% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:48% 0%}
+    50%{background-position:53% 100%}
+    100%{background-position:48% 0%}
+}
 /* Container */
 
 .container{
@@ -182,3 +207,37 @@ body{
     font-size:20px;
 
 }
+
+/* quote */
+
+blockquote {
+    position: relative;
+    padding-left: 30px;
+    font-weight: 200;
+    color: #fff;
+    padding: 1em;
+    margin: 1em;
+    max-width: 33em;
+    font-size: 24px;
+    font-family: 'Lobster', cursive;
+  }
+  blockquote:before {
+    content: "“";
+    font-family: 'Lobster', cursive;
+    position: absolute;
+    right: 100%;
+    font-size: 120px;
+    line-height: 0px;
+    top: 50px;
+    color: #78e08f;
+  }
+  blockquote:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    width: 80px;
+    height: 5px;
+    background: #e56d39;
+    left: 1em;
+  }
