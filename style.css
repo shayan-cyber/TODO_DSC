@@ -60,6 +60,24 @@ body{
 
 }
 
+#date{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    font-size:15px;
+    font-weight: 300px;
+}
+.lineThrough{
+    text-decoration: line-through;
+    color: #ccc;
+
+}
+.fa-check-circle{
+    color:greenyellow
+
+}
+
 /* content */
 
 .content{
